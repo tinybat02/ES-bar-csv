@@ -1,0 +1,21 @@
+{
+  "type": "panel",
+  "name": "ES Bar CSV",
+  "id": "id-es-bar-csv",
+  "dataFormats": ["table"],
+  "info": {
+    "description": "ES Bar CSV",
+    "author": {
+      "name": "Nam Le"
+    },
+    "keywords": [],
+    "screenshots": [],
+    "version": "1.0.0",
+    "updated": "2021-02-23"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
