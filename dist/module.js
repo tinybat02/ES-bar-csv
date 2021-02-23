@@ -55269,7 +55269,6 @@ function (_super) {
     ;
     var barOrder = this.props.options.barOrder;
     if (data.length == 0 || barOrder.length == 0) return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, "No Data");
-    console.log('data debug ', data);
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       style: {
         width: width,
@@ -55529,11 +55528,10 @@ var processData = function processData(series, timezone) {
   };
 };
 var formatTick = function formatTick(epoch, timezone, length) {
-  console.log('format tick ', length);
   var datetime = dayjs__WEBPACK_IMPORTED_MODULE_1___default()(epoch).tz(timezone);
-  if (length <= 30) return datetime.format('HH:mm');
+  if (length <= 20) return datetime.format('HH:mm');
 
-  if (length <= 150) {
+  if (length <= 40) {
     if (datetime.minute() == 0) return datetime.format('HH:mm');else return '';
   }
 
