@@ -55502,15 +55502,15 @@ var processData = function processData(series, timezone) {
     data: [],
     keys: []
   };
-  var csvData = series[0].fields[1].values.buffer.map(function (time_num) {
-    return {
+  var csvData = [];
+  var result = [];
+  series[0].fields[1].values.buffer.map(function (time_num) {
+    csvData.push({
       Timestamp: dayjs__WEBPACK_IMPORTED_MODULE_1___default()(time_num).tz(timezone).format('DD/MM HH:mm')
-    };
-  });
-  var result = series[0].fields[1].values.buffer.map(function (time_num) {
-    return {
+    });
+    result.push({
       timestamp: time_num
-    };
+    });
   });
   var keys = [];
   series.map(function (serie) {

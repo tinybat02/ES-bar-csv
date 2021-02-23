@@ -29,13 +29,12 @@ export const processData = (series: Frame[], timezone: string = 'Europe/Berlin')
 
   if (isZero) return { data: [], keys: [] };
 
-  const csvData: Array<{ [key: string]: number | string }> = series[0].fields[1].values.buffer.map((time_num) => ({
-    Timestamp: dayjs(time_num).tz(timezone).format('DD/MM HH:mm'),
-  }));
-
-  const result: Array<{ [key: string]: any }> = series[0].fields[1].values.buffer.map((time_num) => ({
-    timestamp: time_num,
-  }));
+  const csvData: Array<{ [key: string]: number | string }> = [];
+  const result: Array<{ [key: string]: any }> = [];
+  series[0].fields[1].values.buffer.map((time_num) => {
+    csvData.push({ Timestamp: dayjs(time_num).tz(timezone).format('DD/MM HH:mm') });
+    result.push({ timestamp: time_num });
+  });
 
   const keys: string[] = [];
   series.map((serie) => {
