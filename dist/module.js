@@ -55267,7 +55267,9 @@ function (_super) {
     var data = this.state.data
     /* , keys  */
     ;
-    var barOrder = this.props.options.barOrder;
+    var _b = this.props.options,
+        barOrder = _b.barOrder,
+        showlegend = _b.showlegend;
     if (data.length == 0 || barOrder.length == 0) return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, "No Data");
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       style: {
@@ -55363,7 +55365,7 @@ function (_super) {
           }
         }, id, " - ", Object(_util_process__WEBPACK_IMPORTED_MODULE_3__["formalFullEpoch"])(indexValue, timezone), " : ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", null, value));
       },
-      legends: [{
+      legends: showlegend ? [{
         dataFrom: 'keys',
         anchor: 'bottom-right',
         direction: 'column',
@@ -55382,7 +55384,7 @@ function (_super) {
             itemOpacity: 1
           }
         }]
-      }],
+      }] : [],
       animate: true,
       motionStiffness: 90,
       motionDamping: 15
@@ -55444,7 +55446,8 @@ __webpack_require__.r(__webpack_exports__);
 var defaults = {
   timezone: 'Europe/Berlin',
   barOrder: [],
-  filename: 'save'
+  filename: 'save',
+  showlegend: true
 };
 
 /***/ }),

@@ -4,12 +4,14 @@ export interface PanelOptions {
   timezone: string;
   barOrder: string[];
   filename: string;
+  showlegend: boolean;
 }
 
 export const defaults: PanelOptions = {
   timezone: 'Europe/Berlin',
   barOrder: [],
   filename: 'save',
+  showlegend: true,
 };
 
 export interface Buffer extends Vector {
