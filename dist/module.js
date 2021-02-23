@@ -55292,7 +55292,7 @@ function (_super) {
       indexBy: "timestamp",
       margin: {
         top: 50,
-        right: 130,
+        right: showlegend ? 130 : 60,
         bottom: 50,
         left: 60
       },

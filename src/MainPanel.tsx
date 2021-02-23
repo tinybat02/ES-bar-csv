@@ -71,7 +71,7 @@ export class MainPanel extends PureComponent<Props, State> {
           data={data}
           keys={barOrder}
           indexBy="timestamp"
-          margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+          margin={{ top: 50, right: showlegend ? 130 : 60, bottom: 50, left: 60 }}
           padding={0.3}
           groupMode="grouped"
           valueScale={{ type: 'linear' }}
