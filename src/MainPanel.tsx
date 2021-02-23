@@ -58,6 +58,7 @@ export class MainPanel extends PureComponent<Props, State> {
 
     if (data.length == 0 || barOrder.length == 0) return <div>No Data</div>;
 
+    console.log('data debug ', data);
     return (
       <div
         style={{

@@ -50,6 +50,7 @@ export const processData = (series: Frame[], timezone: string = 'Europe/Berlin')
 };
 
 export const formatTick = (epoch: React.Key, timezone: string, length: number) => {
+  console.log('format tick ', length);
   const datetime = dayjs(epoch).tz(timezone);
   if (length <= 30) return datetime.format('HH:mm');
   if (length <= 150) {
