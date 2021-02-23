@@ -105,7 +105,7 @@ export class MainPanel extends PureComponent<Props, State> {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'customers',
+            legend: 'passengers',
             legendPosition: 'middle',
             legendOffset: -40,
           }}
